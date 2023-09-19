@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Bus Tracking</title>
+    <!-- Include necessary CSS and JavaScript libraries -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="heading">Bus Tracking</h1>
+        <span class="user-button"></span>
+    </header>
+    <div class="login-container">
+        <form id="login-form">
+            <h1>User Login</h1>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" id="log-btn">Login</button>
+        </form>
+    </div>
+    <section class="search-section">
+        <div class="search-bar">
+            <input type="text" id="fromInput" placeholder="From">
+            <input type="text" id="toInput" placeholder="To">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div class="notification">
+            <label for="notificationCheckbox">Turn on Notifications</label>
+            <input type="checkbox" id="notificationCheckbox">
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div id="map"></div>
+        <button id="viewLiveBtn">See Live Location</button>
+    </section>
+
+    <section class="bus-list-section">
+        <h2>Live Buses on Route</h2>
+        <ul id="busList">
+            <!-- Bus list items will be dynamically added here -->
+        </ul>
+    </section>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="google.js"></script>
+</body>
+</html>
