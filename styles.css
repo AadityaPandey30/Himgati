@@ -116,7 +116,9 @@ footer {
     margin-bottom: 10px;
     color: #333;
 }
-
+.news-marquee marquee{
+   height:200;
+}
 .marquee-content {
     overflow: hidden;
 }
