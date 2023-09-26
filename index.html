@@ -9,47 +9,58 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/58118f0173.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1 id="heading">Bus Tracking</h1>
-        <span class="user-button"></span>
+        <!-- Logo -->
+        <div class="logo">
+            <i class="fa-solid fa-bus" style="color: darkblue;font-size:x-large;"></i>
+        </div>
+        
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="login-container">
-        <form id="login-form">
-            <h1>User Login</h1>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" id="log-btn">Login</button>
-        </form>
+    <!-- Slideshow section -->
+<section class="image-slideshow">
+    <h2>HRTC Bus Tracking</h2>
+    <div class="slideshow-container">
+        <img class="mySlides" src="im1.jpg" alt="Image 1">
+        <img class="mySlides" src="im2.jpg" alt="Image 2">
+        <img class="mySlides" src="om4.jpg" alt="Image 3">
+        <!-- Add more image tags as needed -->
     </div>
-    <section class="search-section">
-        <div class="search-bar">
-            <input type="text" id="fromInput" placeholder="From">
-            <input type="text" id="toInput" placeholder="To">
-            <button id="searchBtn">Search</button>
-        </div>
-        <div class="notification">
-            <label for="notificationCheckbox">Turn on Notifications</label>
-            <input type="checkbox" id="notificationCheckbox">
-        </div>
-    </section>
-
-    <section class="map-section">
-        <div id="map"></div>
-        <button id="viewLiveBtn">See Live Location</button>
-    </section>
-
-    <section class="bus-list-section">
-        <h2>Live Buses on Route</h2>
-        <ul id="busList">
-            <!-- Bus list items will be dynamically added here -->
-        </ul>
+</section>
+    
+    <!-- Self-scrolling news section using <marquee> -->
+    <section class="news-marquee">
+        <h2>Latest News</h2>
+        <hr>
+        <marquee behavior="scroll" direction="up" scrollamount="2">
+            <p><a href="#">Breaking News: New Bus Route Added!</a></p>
+            <p><a href="#">Traffic Alert: Delays on Route 5</a></p>
+            <p><a href="#">Service Update: Extended Weekend Hours</a></p>
+            <p><a href="#">Breaking News: New Bus Route Added!</a></p>
+            <p><a href="#">Traffic Alert: Delays on Route 5</a></p>
+            <p><a href="#">Service Update: Extended Weekend Hours</a></p>
+            <!-- Add more news items as needed -->
+        </marquee>
     </section>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
-    <script src="google.js"></script>
+    <script src="script.js"></script>
 </body>
+<footer>
+    <p>* Marked services are available for booking at HRTC counter</p>
+    <p>© 2017 Himachal Pradesh State Road Transport Corporation. All Rights Reserved.</p>
+</footer>
 </html>
