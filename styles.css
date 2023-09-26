@@ -60,7 +60,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -156,7 +156,7 @@ footer {
     text-align: center;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 h2 {
