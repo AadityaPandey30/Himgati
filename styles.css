@@ -1,170 +1,213 @@
-/* Reset some default styles */
-body, h1, h2, ul {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Set a background color and font for the entire page */
-body {
+/* Apply styles to the entire page */
+html, body {
     font-family: Arial, sans-serif;
-    background-color: #eeeeee;;
-    margin: 0;
-    padding: 0;
+    background-color: #f5f5f5;
 }
 
-/* Style the header */
+/* Header Styles */
 header {
-    background-color: #3498db;
+    background-color: #f44444;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 50px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    vertical-align:middle;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover, i:hover {
+    color: #0cff2c;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    display: flex;
+    padding: 10px 0;
 }
 
-/* Style the main sections */
-.search-section, .map-section, .bus-list-section {
-    background-color: #fff;
-    margin: 20px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
+/* Style for the image slideshow section */
+.image-slideshow {
+    text-align: center;
     padding: 20px;
+}
+
+.image-slideshow h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/* Style for the news section */
+.news-marquee {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.news-marquee h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.marquee-content {
+    overflow: hidden;
+}
+
+.marquee-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Style for the news links */
+.marquee-content a {
+    text-decoration: none;
+    color: #0077cc;
+    transition: color 0.3s ease-in-out;
+}
+
+.marquee-content a:hover {
+    color: #ff5733;
+}
+
+
+.login-container {
+    background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width:400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Style the search bar */
-.search-bar {
-    display: flex;
-    align-items: center;
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-input[type="text"] {
-    width: 45%; /* Adjust the width of the input fields */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"]{
+    width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
+    border-radius: 3px;
 }
 
-button#searchBtn {
+.btn-container {
+    text-align: center;
+}
+
+button {
     padding: 10px 20px;
     background-color: #3498db;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Style the notification checkbox */
-.notification {
-    margin-top: 10px;
+button:hover {
+    background-color: #ff5733;
 }
 
-/* Style the map container */
-#map {
-    width: 100%;
-    height: 400px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Style the "See Live Location" button */
-button#viewLiveBtn {
-    padding: 10px 20px;
-    background-color: #27ae60; /* Change the color as desired */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-/* Style the bus list */
-#busList {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Style the bus list items */
-#busList li {
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 768px) {
-    .search-bar {
-        flex-direction: column;
-    }
-
-    input[type="text"] {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
-
-.user-button {
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    color: #ff0000;
-    border-radius: 50%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-left: auto; 
-    margin-right: 20px; 
-    font-size: 18px;
-}
-
-#heading{
-    padding-left: 20px;
-}
-
-/* Style for the login form container */
-.login-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 4; /* Set the z-index to 4 to appear above other elements */
-}
-
-/* Style for the login form */
-.login-container form {
-    color: white;
-    padding: 20px;
+.note{
     text-align: left;
-    max-width: 330px;
-    background-color: rgba(0, 0, 0, 0.8); 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 18px;
-    margin-top: 50px;
+    margin: 5px 0px;
+    padding: 4px;
 }
 
-/* Style for form elements (labels, inputs, and button) */
-.login-container label,
-.login-container input,
-.login-container button {
-    display: block;
-    margin: 10px 0;
+hr{
+    color: 2px solid gray;
 }
 
-#email, #password{
-    width: 250px;
-    height: 18px;
+#foot{
+    color: rgb(163, 163, 163);
+    border-radius: 0 0 8px 8px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-weight: 700;
 }
 
-#log-btn{
-    padding: 4px 9px;
-    height: 2%;
-    font-size: 17px;
-}
